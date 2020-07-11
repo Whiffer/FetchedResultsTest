@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		133D2B7824B6826000D62859 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D2B7724B6826000D62859 /* main.swift */; };
+		133D2B8824B683B700D62859 /* Attribute+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D2B7F24B683B700D62859 /* Attribute+CoreDataProperties.swift */; };
+		133D2B8924B683B700D62859 /* ManagedObjectContextDidSaveNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D2B8024B683B700D62859 /* ManagedObjectContextDidSaveNotifications.swift */; };
+		133D2B8A24B683B700D62859 /* Attribute+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D2B8124B683B700D62859 /* Attribute+CoreDataClass.swift */; };
+		133D2B8B24B683B700D62859 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D2B8224B683B700D62859 /* Item+CoreDataProperties.swift */; };
+		133D2B8C24B683B700D62859 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D2B8324B683B700D62859 /* CoreData.swift */; };
+		133D2B8D24B683B700D62859 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D2B8424B683B700D62859 /* Item+CoreDataClass.swift */; };
+		133D2B8E24B683B700D62859 /* SwiftUI_Core_Data_Test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 133D2B8524B683B700D62859 /* SwiftUI_Core_Data_Test.xcdatamodeld */; };
+		133D2B8F24B683B700D62859 /* CoreDataDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133D2B8724B683B700D62859 /* CoreDataDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +33,14 @@
 /* Begin PBXFileReference section */
 		133D2B7424B6826000D62859 /* FetchedResultsTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FetchedResultsTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		133D2B7724B6826000D62859 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		133D2B7F24B683B700D62859 /* Attribute+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Attribute+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		133D2B8024B683B700D62859 /* ManagedObjectContextDidSaveNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectContextDidSaveNotifications.swift; sourceTree = "<group>"; };
+		133D2B8124B683B700D62859 /* Attribute+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Attribute+CoreDataClass.swift"; sourceTree = "<group>"; };
+		133D2B8224B683B700D62859 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		133D2B8324B683B700D62859 /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		133D2B8424B683B700D62859 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		133D2B8624B683B700D62859 /* SwiftUI_Core_Data_Test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftUI_Core_Data_Test.xcdatamodel; sourceTree = "<group>"; };
+		133D2B8724B683B700D62859 /* CoreDataDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +74,24 @@
 			isa = PBXGroup;
 			children = (
 				133D2B7724B6826000D62859 /* main.swift */,
+				133D2B7E24B683B700D62859 /* Core Data Model */,
 			);
 			path = FetchedResultsTest;
+			sourceTree = "<group>";
+		};
+		133D2B7E24B683B700D62859 /* Core Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				133D2B8324B683B700D62859 /* CoreData.swift */,
+				133D2B8724B683B700D62859 /* CoreDataDataSource.swift */,
+				133D2B8024B683B700D62859 /* ManagedObjectContextDidSaveNotifications.swift */,
+				133D2B8524B683B700D62859 /* SwiftUI_Core_Data_Test.xcdatamodeld */,
+				133D2B8424B683B700D62859 /* Item+CoreDataClass.swift */,
+				133D2B8224B683B700D62859 /* Item+CoreDataProperties.swift */,
+				133D2B8124B683B700D62859 /* Attribute+CoreDataClass.swift */,
+				133D2B7F24B683B700D62859 /* Attribute+CoreDataProperties.swift */,
+			);
+			path = "Core Data Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +151,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				133D2B8A24B683B700D62859 /* Attribute+CoreDataClass.swift in Sources */,
+				133D2B8824B683B700D62859 /* Attribute+CoreDataProperties.swift in Sources */,
+				133D2B8924B683B700D62859 /* ManagedObjectContextDidSaveNotifications.swift in Sources */,
+				133D2B8F24B683B700D62859 /* CoreDataDataSource.swift in Sources */,
 				133D2B7824B6826000D62859 /* main.swift in Sources */,
+				133D2B8C24B683B700D62859 /* CoreData.swift in Sources */,
+				133D2B8B24B683B700D62859 /* Item+CoreDataProperties.swift in Sources */,
+				133D2B8E24B683B700D62859 /* SwiftUI_Core_Data_Test.xcdatamodeld in Sources */,
+				133D2B8D24B683B700D62859 /* Item+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +325,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		133D2B8524B683B700D62859 /* SwiftUI_Core_Data_Test.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				133D2B8624B683B700D62859 /* SwiftUI_Core_Data_Test.xcdatamodel */,
+			);
+			currentVersion = 133D2B8624B683B700D62859 /* SwiftUI_Core_Data_Test.xcdatamodel */;
+			path = SwiftUI_Core_Data_Test.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 133D2B6C24B6826000D62859 /* Project object */;
 }
