@@ -1,0 +1,70 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2576
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Oblique;\f2\fswiss\fcharset0 Helvetica-Bold;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 FB7960282\
+\
+
+\f1\i 7/18/20, 11:55:46 AM PDT\
+\
+
+\f2\i0\b\fs36 'name' property of NSFetchedResultsSectionInfo is sometimes incorrect\
+
+\fs30 FB7960282 \'97 iOS & iPadOS\
+\
+
+\fs28 Basic Information\
+\
+
+\fs24 Please provide a descriptive title for your feedback:\
+
+\f0\b0 'name' property of NSFetchedResultsSectionInfo is sometimes incorrect\
+\
+
+\f2\b Which area are you seeing an issue with?\
+
+\f0\b0 Core Data API\
+\
+
+\f2\b What type of feedback are you reporting?\
+
+\f0\b0 Incorrect/Unexpected Behavior\
+\
+
+\f2\b\fs28 Description\
+\
+
+\fs24 Please describe the issue and what steps we can take to reproduce it:\
+
+\f0\b0 I have included a very simple, sample command line project to demonstrate the problem.  The test case is a macOS command line program, however this error also occurs with an iOS App and occurs on macOS Catalina, iOS 13.x, and iOS 14 beta 2.  Here is the background of what the test program is doing. \
+\
+There are two Core Data entities (Item and Attribute). Each entity has a \'91name\'92 and \'91order\'92 attribute.\
+Item has a one-to-many relationship with Attribute. \
+An NSFetchRequest is built to retrieve Attribute objects using the Attribute\'92s \'91item.order\'92 key value as a major sort and the Attribute\'92s own \'91order\'92 key value as a minor sort.  \'91item.name\'92 is used as the sectionNameKeyPath for grouping the Attributes.\
+\
+Following the fetch, the fetched results controller\'92s \'91sections\'92 property returns an array of NSFetchedResultsSectionInfo objects.  Each element of the array corresponds to a group of Attribute objects.  The \'91objects\'92 property of the NSFetchedResultsSectionInfo always contains the expected array of Attribute objects.\
+\
+However the \'91name\'92 property of the NSFetchedResultsSectionInfo object does not always match the value returned by value(forKeyPath:) for each of the Attributes in the \'91objects\'92 array.  The Attributes are indeed grouped properly by the sectionNameKeyPath, but the \'91name\'92 property of the group is not always correct.\
+\
+To see this in action, the sample program performs an initial query and prints the results showing the properties from NSFetchedResultsSectionInfo and also the objects retrieved.\
+Following the initial query, the \'91order\'92 property values of the first two Item\'92s are swapped and the query performed again.  This time, notice that sections of Attribute\'92s are again grouped properly, however, the \'91name\'92 property of the NSFetchedResultsSectionInfo does not match the value returned by value(forKeyPath:) for each of the Attributes in the \'91objects\'92 array. \
+\
+
+\f2\b\fs28 Files\
+
+\f0\b0\fs24 FetchedResultsTest.zip\
+FetchedResultsTest Console Log.pdf\
+\
+\
+\
+
+\f1\i 7/18/20, 11:55:46 AM PDT\
+
+\f2\i0\b Robert Hartman\
+
+\f0\b0 Just to be clear, this bug report is reporting a problem with the NSFetchedResultsController class when using a sectionNameKeyPath to group the query results into sections. Specifically, depending on the sort descriptors used in the NSFetchRequest, the elements in the array returned by the sections property may have an incorrect value for the name property of the element.\
+\
+}

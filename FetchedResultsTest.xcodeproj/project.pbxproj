@@ -41,6 +41,7 @@
 		133D2B8424B683B700D62859 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
 		133D2B8624B683B700D62859 /* SwiftUI_Core_Data_Test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftUI_Core_Data_Test.xcdatamodel; sourceTree = "<group>"; };
 		133D2B8724B683B700D62859 /* CoreDataDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDataSource.swift; sourceTree = "<group>"; };
+		13967C31256858E200098B25 /* Feedback FB7960282.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Feedback FB7960282.rtf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 		133D2B6B24B6826000D62859 = {
 			isa = PBXGroup;
 			children = (
+				13967C31256858E200098B25 /* Feedback FB7960282.rtf */,
 				133D2B7624B6826000D62859 /* FetchedResultsTest */,
 				133D2B7524B6826000D62859 /* Products */,
 			);
@@ -121,7 +123,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					133D2B7324B6826000D62859 = {
 						CreatedOnToolsVersion = 12.0;
@@ -284,6 +286,7 @@
 		133D2B7C24B6826000D62859 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64WN437W3Z;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -295,6 +298,7 @@
 		133D2B7D24B6826000D62859 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 64WN437W3Z;
 				ENABLE_HARDENED_RUNTIME = YES;
